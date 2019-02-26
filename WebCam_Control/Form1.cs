@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WebCam_Control
 {
-    public partial class Form1 : Form
+    public partial class WebCam_Control : Form
     {
-        public Form1()
+        public WebCam_Control()
         {
             InitializeComponent();
         }
