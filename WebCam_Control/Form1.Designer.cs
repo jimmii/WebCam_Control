@@ -97,6 +97,7 @@
             this.TakePhoto_Btn.TabIndex = 5;
             this.TakePhoto_Btn.Text = "Take Photo";
             this.TakePhoto_Btn.UseVisualStyleBackColor = false;
+            this.TakePhoto_Btn.Click += new System.EventHandler(this.TakePhoto_Btn_Click);
             // 
             // CaptureVideo_Btn
             // 
@@ -107,6 +108,7 @@
             this.CaptureVideo_Btn.TabIndex = 6;
             this.CaptureVideo_Btn.Text = "Capture Video";
             this.CaptureVideo_Btn.UseVisualStyleBackColor = false;
+            this.CaptureVideo_Btn.Click += new System.EventHandler(this.CaptureVideo_Btn_Click);
             // 
             // WebCam_Control
             // 

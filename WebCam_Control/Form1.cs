@@ -7,9 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Imaging;
+using System.IO;
 using AForge;
 using AForge.Video;
 using AForge.Video.DirectShow;
+
 
 namespace WebCam_Control
 {
@@ -45,7 +48,7 @@ namespace WebCam_Control
                 
             }           
             else
-                MessageBox.Show("You must select camera!", "Info", MessageBoxButtons.OK);
+                MessageBox.Show("Select camera!", "Info", MessageBoxButtons.OK);
         }
 
             private void VideoSource_NewFrame(object sender, NewFrameEventArgs eventArgs)
@@ -55,17 +58,38 @@ namespace WebCam_Control
 
         private void WebCam_Control_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if ((VideoSource.IsRunning == true) && (VideoSource!=null))
+            if (VideoSource.IsRunning == true)
                 VideoSource.Stop();
         }
 
         private void Stop_Btn_Click(object sender, EventArgs e)
         {
             if (VideoSource.IsRunning == true)
+                    VideoSource.Stop();       
+        }
+
+        private void TakePhoto_Btn_Click(object sender, EventArgs e)
+        {           
+            if (Directory.Exists("Screen"))
+            {
+                if (VideoSource.IsRunning == true)
                 {
-                    VideoSource.Stop();
-                    VideoSource = null;
-                }   
+                    string FileName = DateTime.Now.Hour.ToString() + "_" + DateTime.Now.Minute.ToString() + "_" + DateTime.Now.Second.ToString();
+                    Display_pictureBox.Image.Save($"Screen\\{FileName}.bmp", ImageFormat.Bmp);
+                }
+                else
+                    MessageBox.Show("I don't see the movie :( \nPlease Start Capturing");
+            }
+            else
+            {
+                Directory.CreateDirectory("Screen");
+            }
+                
+        }
+
+        private void CaptureVideo_Btn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("coming soon...", "Info", MessageBoxButtons.OK);
         }
     }
 }
