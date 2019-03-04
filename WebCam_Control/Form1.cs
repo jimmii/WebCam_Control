@@ -14,6 +14,7 @@ using AForge.Video;
 using AForge.Video.DirectShow;
 
 
+
 namespace WebCam_Control
 {
     public partial class WebCam_Control : Form
@@ -87,9 +88,6 @@ namespace WebCam_Control
                 
         }
 
-        private void CaptureVideo_Btn_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("coming soon...", "Info", MessageBoxButtons.OK);
-        }
+       
     }
 }

@@ -34,7 +34,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Display_pictureBox = new System.Windows.Forms.PictureBox();
             this.TakePhoto_Btn = new System.Windows.Forms.Button();
-            this.CaptureVideo_Btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Display_pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,7 +90,7 @@
             // TakePhoto_Btn
             // 
             this.TakePhoto_Btn.BackColor = System.Drawing.Color.DodgerBlue;
-            this.TakePhoto_Btn.Location = new System.Drawing.Point(235, 703);
+            this.TakePhoto_Btn.Location = new System.Drawing.Point(468, 703);
             this.TakePhoto_Btn.Name = "TakePhoto_Btn";
             this.TakePhoto_Btn.Size = new System.Drawing.Size(213, 38);
             this.TakePhoto_Btn.TabIndex = 5;
@@ -99,24 +98,12 @@
             this.TakePhoto_Btn.UseVisualStyleBackColor = false;
             this.TakePhoto_Btn.Click += new System.EventHandler(this.TakePhoto_Btn_Click);
             // 
-            // CaptureVideo_Btn
-            // 
-            this.CaptureVideo_Btn.BackColor = System.Drawing.Color.DodgerBlue;
-            this.CaptureVideo_Btn.Location = new System.Drawing.Point(716, 703);
-            this.CaptureVideo_Btn.Name = "CaptureVideo_Btn";
-            this.CaptureVideo_Btn.Size = new System.Drawing.Size(213, 38);
-            this.CaptureVideo_Btn.TabIndex = 6;
-            this.CaptureVideo_Btn.Text = "Capture Video";
-            this.CaptureVideo_Btn.UseVisualStyleBackColor = false;
-            this.CaptureVideo_Btn.Click += new System.EventHandler(this.CaptureVideo_Btn_Click);
-            // 
             // WebCam_Control
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(1182, 753);
-            this.Controls.Add(this.CaptureVideo_Btn);
             this.Controls.Add(this.TakePhoto_Btn);
             this.Controls.Add(this.Display_pictureBox);
             this.Controls.Add(this.label1);
@@ -142,7 +129,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox Display_pictureBox;
         private System.Windows.Forms.Button TakePhoto_Btn;
-        private System.Windows.Forms.Button CaptureVideo_Btn;
     }
 }
 

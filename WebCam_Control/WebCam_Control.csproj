@@ -42,6 +42,9 @@
     <Reference Include="AForge.Video.DirectShow">
       <HintPath>..\..\..\..\Desktop\aforge_camera_lib\Release\AForge.Video.DirectShow.dll</HintPath>
     </Reference>
+    <Reference Include="AForge.Video.FFMPEG">
+      <HintPath>..\..\..\..\Desktop\aforge_camera_lib\Release\AForge.Video.FFMPEG.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
